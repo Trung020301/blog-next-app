@@ -1,0 +1,60 @@
+.slider {
+    margin: 40px 0;
+    position: relative;
+    overflow: hidden;
+
+    .icon {
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        z-index: 3;
+        background-color: rgba(140, 194, 204, 0.6);
+        top: calc(50% - 40px);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all ease-in .3s;
+        display: none;
+        cursor: pointer;
+    }
+
+
+
+    .listSlide {
+        display: flex;
+        width: 500%;
+
+        transition: all ease-in-out 2s;
+        .Item {
+            width: 100%;
+            // animation: fadeIn 2s ease-in-out;
+        }
+    }
+
+    .icon:first-child {
+        left: 10px;
+
+    }
+
+    .icon:hover {
+        background-color: rgba(9, 184, 217, 0.6);
+    }
+
+    .icon:last-child {
+        right: 10px;
+    }
+}
+
+.slider:hover .icon {
+    display: flex;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0.5;
+    }
+    to {
+        opacity: 1;
+    }
+}

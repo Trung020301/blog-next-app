@@ -1,7 +1,19 @@
-import '../styles/globals.css'
+import LayoutPage from "../components/layout/Index";
+import "../styles/globals.css";
+import Theme from "../Theme";
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  if (Component.getLayout) {
+    return Component.getLayout(<Component {...pageProps} />);
+  }
+
+  return (
+    <Theme>
+        <LayoutPage>
+          <Component {...pageProps} />
+        </LayoutPage>
+    </Theme>
+  );
 }
 
-export default MyApp
+export default MyApp;

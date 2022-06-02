@@ -1,0 +1,41 @@
+.contact {
+    height: 30px;
+    background-color: #d8e0ed;
+    display: flex;
+    justify-content: center;
+
+    .contentContact {
+        font-size: 14px;
+        width: 100%;
+        max-width: 1200px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .info {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+
+            .infoItem {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+            }
+        }
+
+        .contactList {
+            display: flex;
+            list-style: none;
+            align-items: center;
+            gap: 10px;
+
+            .contactItem {
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}
